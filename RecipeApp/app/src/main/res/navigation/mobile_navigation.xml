@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@+id/navigation_menu">
+
+    <fragment
+        android:id="@+id/navigation_suggest_dish"
+        android:name="com.example.recipeapp.ui.fragments.SuggestDishFragment"
+        android:label="@string/title_suggest_dish"
+        tools:layout="@layout/fragment_suggest_dish" />
+
+
+    <fragment
+        android:id="@+id/navigation_share_dish"
+        android:name="com.example.recipeapp.ui.fragments.ShareDishFragment"
+        android:label="@string/title_share_dish"
+        tools:layout="@layout/fragment_share_dish" />
+
+    <fragment
+        android:id="@+id/navigation_menu"
+        android:name="com.example.recipeapp.ui.fragments.MenuFragment"
+        android:label="@string/title_menu"
+        tools:layout="@layout/fragment_menu">
+    </fragment>
+
+
+</navigation>

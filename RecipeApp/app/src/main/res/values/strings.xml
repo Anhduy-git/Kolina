@@ -1,0 +1,147 @@
+<resources>
+    <string name="app_name">Recipe App</string>
+    <string name="login_title">Login</string>
+    <string name="et_hint_email_id">Email</string>
+    <string name="et_hint_password">Password</string>
+    <string name="lbl_forgot_password">Forgot Password ?</string>
+    <string name="btn_lbl_login">Login</string>
+    <string name="don_t_have_an_account">Don\'t have an account ?</string>
+    <string name="register">Register</string>
+    <string name="create_an_account">CREATE AN ACCOUNT</string>
+
+    <string name="hint_last_name">Last name</string>
+    <string name="hint_first_name">First name</string>
+    <string name="et_hint_confirm_password">Confirm Password</string>
+
+    <string name="i_agree_to_the_terms_and_condition">I Agree To The <u> Terms &amp; Condition </u></string>
+    <string name="btn_lbl_register">Register</string>
+
+    <string name="already_have_an_account">Already have an account?</string>
+    <string name="login"><u>Login</u></string>
+
+    <string name="err_msg_enter_first_name">Please enter first name.</string>
+    <string name="err_msg_enter_last_name">Please enter last name.</string>
+    <string name="err_msg_enter_email">Please enter email.</string>
+    <string name="err_msg_enter_password">Please enter password.</string>
+    <string name="err_msg_enter_confirm_password">Please enter confirm password.</string>
+    <string name="err_msg_password_and_confirm_password_mismatch">Password and confirm password does not match.</string>
+    <string name="err_msg_agree_terms_and_condition">Please agree terms and condition.</string>
+    <string name="registery_successfull">Your details are valid.</string>
+
+    <string name="please_wait">Please Wait&#8230;</string>
+
+    <string name="title_forgot_password">FORGOT PASSWORD?</string>
+    <string name="forgot_password_title_description">Enter your username and e-mail address we\'ll send you a email to reset your password</string>
+    <string name="btn_lbl_submit">Submit</string>
+
+    <string name="email_sent_success">\"Email sent successfully to reset your password! \"</string>
+
+    <string name="register_success">You are registered successfully.</string>
+
+    <string name="title_complete_profile">COMPLETE PROFILE</string>
+    <string name="title_edit_profile">EDIT PROFILE</string>
+    <string name="et_hint_mobile_number">Mobile Number</string>
+    <string name="rb_lbl_male">MALE</string>
+    <string name="rb_lbl_female">FEMALE</string>
+    <string name="btn_lbl_save">Save</string>
+
+    <string name="read_storage_permission_denied">Oops, you just denied the permission for storage. You can also allow it from settings.</string>
+
+    <string name="image_selection_failed">Image selection Failed!</string>
+
+    <string name="err_msg_enter_mobile_number">Please enter mobile number.</string>
+
+    <string name="msg_profile_update_success">Your profile is updated successfully.</string>
+
+    <!--    <string name="title_activity_dashboard">DashboardActivity</string>-->
+    <string name="please_click_back_again_to_exit">Please click back again to exit</string>
+
+    <string name="action_settings">Settings</string>
+
+    <string name="title_settings">Setting</string>
+    <string name="lbl_edit">Edit</string>
+    <string name="lbl_addresses">Addresses</string>
+    <string name="btn_lbl_logout">Logout</string>
+
+    <string name="action_add_dish">Add dish</string>
+
+
+    <string name="et_hint_dish_title">Dish Title</string>
+    <string name="et_hint_dish_description">Dish Description</string>
+    <string name="et_hint_dish_serving_size">Serving Size</string>
+    <string name="et_hint_main_material">Main Material</string>
+    <string name="tv_material">Material</string>
+    <string name="tv_recipe">Recipe</string>
+
+
+    <string name="err_msg_select_dish_image">Please select dish image.</string>
+    <string name="err_msg_enter_dish_title">Please enter dish title.</string>
+    <string name="err_msg_enter_dish_price">Please enter dish price.</string>
+    <string name="err_msg_enter_dish_description">Please enter dish description.</string>
+    <string name="err_msg_enter_dish_quantity">Please enter dish quantity.</string>
+
+    <string name="dish_uploaded_success_message">Your dish is uploaded successfully.</string>
+    <string name="no_dishs_added_yet">No dishs added yet!</string>
+    <string name="no_dashboard_item_found">No items found!</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+    <string name="dish_price">$$%1$s</string>
+
+    <string name="dish_delete_success_message">Your dish is deleted successfully.</string>
+    <string name="delete_dialog_title">Delete</string>
+    <string name="delete_dialog_message">Are you sure you want to delete the dish?</string>
+    <string name="yes">Yes</string>
+    <string name="no">No</string>
+
+
+    <string name="title_menu">Menu</string>
+    <string name="title_suggest_dish">Suggest Dish</string>
+    <string name="title_share_dish">Share Dish</string>
+    <string name="title_activity_dashboard">Dashboard</string>
+    <string name="your_web_client_id">177259220147-nml8ku3q2osi97vbencja1g5r5pp4kt9.apps.googleusercontent.com</string>
+    <string name="title_dish_menu">Menu Dish</string>
+    <string name="title_add_dish">ADD DISH</string>
+    <string name="tv_summary">Summary</string>
+    <string name="tv_main_material">Main Material</string>
+    <string name="pork_title">Pork</string>
+    <string name="chicken_title">Chicken</string>
+    <string name="fish_title">Fish</string>
+    <string name="fruits_title">Fruits</string>
+    <string name="vegetable_title">Vegetable</string>
+    <string name="candy_title">Candy</string>
+    <string name="egg_title">Eggs</string>
+
+    <string name="material_num">Material %1$d</string>
+    <string name="et_hint_material_detail">Your material</string>
+    <string name="add_material_btn">+ Material</string>
+
+    <string name="recipe_num">Recipe %1$d</string>
+    <string name="et_hint_recipe_detail">Your recipe</string>
+    <string name="add_recipe_btn">+ Recipe</string>
+    <string name="err_msg_enter_dish_serving_size">Please enter serving size</string>
+    <string name="title_dish_details">Details</string>
+    <string name="title_edit_dish">Edit Dish</string>
+    <string name="tv_dish_type">Dish Type</string>
+    <string name="clone_dialog_title">Clone dish\'s recipe</string>
+    <string name="clone_dialog_message">Do you want to clone this dish\'s recipe ?</string>
+    <string name="share_dialog_message">Do you want to share this dish\'s recipe ?</string>
+
+    <string name="dish_type_variable">Dish Type: %1$s</string>
+    <string name="dish_cloned_success_message">Your dish is cloned successfully</string>
+    <string name="dish_shared_success_message">Your dish is shared successfully</string>
+    <string name="tv_comment">Comment</string>
+    <string name="et_hint_add_comment">Add your comments</string>
+    <string name="share_dialog_title">Share this recipe</string>
+    <string name="title_dish_result">Result</string>
+
+
+    <string-array name="dish_type_array">
+        <item>Man</item>
+        <item>Ngot</item>
+        <item>Lau</item>
+        <item>Nuong</item>
+        <item>Trai Cay</item>
+        <item>Chay</item>
+    </string-array>
+</resources>

@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.fragments.SuggestDishFragment">
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:padding="10dp"
+        android:id="@+id/rv_material"
+        android:layout_width="match_parent"
+        android:layout_height="550dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="10dp"
+        android:background="@drawable/recyclerview_border"
+        android:layout_marginBottom="20dp"
+
+        android:scrollbars="vertical"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        />
+
+
+
+
+        <ImageView
+            android:id="@+id/view_animation"
+            android:layout_width="50dp"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            android:background="@null"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+
+        />
+        <FrameLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="60dp">
+            <View
+                android:id="@+id/view_end_animation"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:visibility="invisible" />
+
+            <com.google.android.material.floatingactionbutton.FloatingActionButton
+                android:id="@+id/fab_cart"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@null"
+                android:scaleType="center"
+                android:src="@drawable/ic_baseline_shopping_cart_24"
+                app:fabCustomSize="80dp"
+                app:maxImageSize="40dp"
+                >
+
+            </com.google.android.material.floatingactionbutton.FloatingActionButton>
+
+            <com.example.recipeapp.utils.MSPTextViewRegular
+                android:id="@+id/tv_cart_counter"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:elevation="8dp"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:text="0"
+                android:textSize="14sp"
+                android:background="@drawable/cart_textview">
+
+            </com.example.recipeapp.utils.MSPTextViewRegular>
+
+
+
+        </FrameLayout>
+
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
