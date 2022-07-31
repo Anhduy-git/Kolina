@@ -78,7 +78,7 @@ class SummaryDishFragment : BaseFragment() {
 
             //set checked box
             var idx = 0
-            if (listMainMaterial != null) {
+            if (listMainMaterial != null && listMainMaterial!!.size > 0) {
                 for (item in binding.llListMainMaterial.children) {
                     if (item is CheckBox) {
                         if (item.text.toString() == listMainMaterial!![idx]) {

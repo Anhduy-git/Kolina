@@ -16,6 +16,7 @@ import com.example.recipeapp.databinding.ItemDishShareLayoutBinding
 import com.example.recipeapp.models.Comment
 
 import com.example.recipeapp.models.Dish
+import com.example.recipeapp.ui.activities.UserProfileShareActivity
 
 import com.example.recipeapp.utils.*
 import java.text.SimpleDateFormat
@@ -101,6 +102,12 @@ class CommentListAdapter(
                 calendar.timeInMillis = comment.date
                 val commentDate = formatter.format(calendar.time)
                 tvDate.setText(commentDate.toString())
+
+                profileImage.setOnClickListener {
+                    val intent: Intent = Intent(context, UserProfileShareActivity::class.java)
+                    intent.putExtra(Constants.EXTRA_USER_ID, comment.userId)
+                    context.startActivity(intent)
+                }
             }
         }
 
