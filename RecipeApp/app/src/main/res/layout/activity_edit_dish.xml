@@ -57,7 +57,8 @@
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:background="@color/colorImageViewBackground"
-                    android:scaleType="fitXY" />
+                    android:scaleType="fitXY"
+                    android:src="@drawable/ic_user_placeholder"/>
 
                 <ImageView
                     android:id="@+id/iv_add_update_dish"

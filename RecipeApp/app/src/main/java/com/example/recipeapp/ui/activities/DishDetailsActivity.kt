@@ -11,6 +11,8 @@ import com.example.recipeapp.databinding.ActivityDishDetailsBinding
 import com.example.recipeapp.adapters.ViewPagerAdapter
 import com.example.recipeapp.firestore.FirestoreClass
 import com.example.recipeapp.models.Dish
+import com.example.recipeapp.ui.activities.BaseActivity
+import com.example.recipeapp.ui.activities.EditDishActivity
 import com.example.recipeapp.utils.Constants
 import com.google.android.material.dialog.MaterialAlertDialogBuilder
 import com.google.android.material.tabs.TabLayoutMediator
@@ -34,7 +36,7 @@ class DishDetailsActivity : BaseActivity() {
                     tab.text = "Summary"
                 }
                 1 -> {
-                    tab.text = "Material"
+                    tab.text = "Ingredient"
                 }
                 2 -> {
                     tab.text = "Recipe"
@@ -124,7 +126,7 @@ class DishDetailsActivity : BaseActivity() {
                 showProgressDialog(resources.getString(R.string.please_wait))
 
                 // Call the function of Firestore class.
-                FirestoreClass().deleteDish(this@DishDetailsActivity, dishID, mDishDetails?.dish_type!!)
+                FirestoreClass().deleteDish(this@DishDetailsActivity, dishID)
                 // END
 
                 dialogInterface.dismiss()

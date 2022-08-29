@@ -74,7 +74,7 @@ class DishAdapter(
 
         fun bind(dish: Dish, activity: Activity) {
             binding.apply {
-                if (dish.image != null) {
+                if (dish.image != null && dish.image != "") {
                     GlideLoader(activity).loadDishPicture(dish.image, ivDishImage)
                 }
 

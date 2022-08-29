@@ -31,7 +31,7 @@ class DishDetailsShareActivity : BaseActivity() {
                     tab.text = "Summary"
                 }
                 1 -> {
-                    tab.text = "Material"
+                    tab.text = "Ingredient"
                 }
                 2 -> {
                     tab.text = "Recipe"

@@ -80,7 +80,7 @@ class CommentListAdapter(
     class MyViewHolder(private var binding: ItemCommentLayoutBinding) : RecyclerView.ViewHolder(binding.root) {
         fun bind(comment: Comment, context: Context) {
             binding.apply {
-                if (comment.userImage != null) {
+                if (comment.userImage != "") {
                     GlideLoader(context).loadDishPicture(comment.userImage, profileImage)
                 }
                 tvUserName.setText(comment.userFullName)

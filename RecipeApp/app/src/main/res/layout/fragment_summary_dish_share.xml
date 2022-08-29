@@ -37,7 +37,8 @@
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:background="@color/colorImageViewBackground"
-                    android:scaleType="fitXY" />
+                    android:scaleType="fitXY"
+                    android:src="@drawable/dish_holder"/>
 
             </FrameLayout>
 

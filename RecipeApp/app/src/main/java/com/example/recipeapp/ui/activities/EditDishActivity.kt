@@ -15,11 +15,11 @@ import androidx.core.app.ActivityCompat
 import androidx.core.content.ContextCompat
 import androidx.core.view.children
 import androidx.recyclerview.widget.LinearLayoutManager
+import com.example.recipeapp.firestore.FirestoreClass
 import com.example.recipeapp.R
 import com.example.recipeapp.adapters.CustomViewListMaterialAdapter
 import com.example.recipeapp.adapters.CustomViewListRecipeAdapter
 import com.example.recipeapp.databinding.ActivityEditDishBinding
-import com.example.recipeapp.firestore.FirestoreClass
 import com.example.recipeapp.models.Dish
 import com.example.recipeapp.utils.Constants
 import com.example.recipeapp.utils.GlideLoader

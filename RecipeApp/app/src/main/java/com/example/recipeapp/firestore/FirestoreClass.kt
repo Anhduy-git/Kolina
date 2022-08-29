@@ -696,7 +696,7 @@ class FirestoreClass {
             .whereEqualTo(Constants.DISH_ID, dishId)
             .get() // Will get the documents snapshots.
             .addOnSuccessListener { document ->
-                 val commentPost = document.documents[0].toObject(CommentPost::class.java)!!
+                val commentPost = document.documents[0].toObject(CommentPost::class.java)!!
 
 
                 when (activity) {
@@ -729,7 +729,7 @@ class FirestoreClass {
             }
     }
 
-//    /**
+    //    /**
 //     * A function to get the product details based on the product id.
 //     */
 //    fun getDishDetails(fragment: SummaryDishFragment, dishId: String, typeDish: String) {
@@ -791,9 +791,9 @@ class FirestoreClass {
 //    /**
 //     * A function to delete the product from the cloud firestore.
 //     */
-    fun deleteDish(activity: Activity, dishId: String, dishType: String) {
+    fun deleteDish(activity: Activity, dishId: String) {
 
-        mFireStore.collection(dishType)
+        mFireStore.collection(Constants.DISHES)
             .document(dishId)
             .delete()
             .addOnSuccessListener {
