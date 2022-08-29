@@ -8,6 +8,7 @@ import android.util.Log
 import android.view.*
 import android.widget.TextView
 import android.widget.Toast
+import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
 import androidx.recyclerview.widget.GridLayoutManager
@@ -46,6 +47,7 @@ class ShareDishFragment : BaseFragment() {
         super.onCreate(savedInstanceState)
         // If we want to use the option menu in fragment we need to add it.
         setHasOptionsMenu(true)
+        (requireActivity() as AppCompatActivity).supportActionBar?.show()
         getDishListFromFireStore()
 
     }

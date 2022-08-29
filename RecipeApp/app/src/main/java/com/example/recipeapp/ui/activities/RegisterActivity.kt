@@ -2,7 +2,6 @@ package com.example.recipeapp.ui.activities
 
 import android.content.Intent
 import android.os.Build
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.text.TextUtils
 import android.view.WindowInsets
@@ -57,7 +56,7 @@ class RegisterActivity : BaseActivity() {
         val actionBar = supportActionBar
         if (actionBar != null) {
             actionBar.setDisplayHomeAsUpEnabled(true)
-            actionBar.setHomeAsUpIndicator(R.drawable.ic_black_color_back_24)
+            actionBar.setHomeAsUpIndicator(R.drawable.ic_black_color_back)
         }
         binding.toolbarRegisterActivity.setNavigationOnClickListener {
             onBackPressed()

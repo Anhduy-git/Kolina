@@ -39,7 +39,7 @@ class AnimationUtil {
 
 
             val fromX: Float = startPos[0].toFloat()
-            val toX: Float = endPos[0].toFloat() + 60
+            val toX: Float = endPos[0].toFloat() + 50
 //            + endViewWidthCenter - startViewWidthCenter
 
 //            Log.d("animation", startPos[0].toString())
@@ -47,7 +47,7 @@ class AnimationUtil {
 //            Log.d("animation", toX.toString())
 
             val fromY: Float = startPos[1].toFloat() - startViewHeightCenter
-            val toY: Float = endPos[1].toFloat() - 40
+            val toY: Float = endPos[1].toFloat() - 80
 //            - endViewHeightCenter + startViewHeightCenter
 
 

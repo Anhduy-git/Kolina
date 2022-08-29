@@ -1,6 +1,5 @@
 package com.example.recipeapp.ui.activities
 
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import com.example.recipeapp.R
 import com.example.recipeapp.databinding.ActivityForgotPasswordBinding
@@ -20,7 +19,7 @@ class ForgotPasswordActivity : BaseActivity() {
         val actionBar = supportActionBar
         if (actionBar != null) {
             actionBar.setDisplayHomeAsUpEnabled(true)
-            actionBar.setHomeAsUpIndicator(R.drawable.ic_black_color_back_24)
+            actionBar.setHomeAsUpIndicator(R.drawable.ic_black_color_back)
             actionBar.setDisplayShowTitleEnabled(false)
         }
         binding.toolbarForgotPasswordActivity.setNavigationOnClickListener {

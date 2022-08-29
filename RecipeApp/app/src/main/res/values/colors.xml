@@ -15,4 +15,20 @@
     <color name="colorSnackBarError">#F72400</color>
 
     <color name="colorImageViewBackground">#E1E1E1</color>
+
+    <color name="bg_color">#E6DFFF</color>
+    <color name="btn_color">#FE724C</color>
+    <color name="item_bg_color">#FFD5E5</color>
+    <color name="dish_type_color_man">#CBF1F5</color>
+    <color name="dish_type_color_ngot">#B5DEFF</color>
+    <color name="dish_type_color_nuong">#F5FCC1</color>
+    <color name="dish_type_color_chay">#FFD5E5</color>
+    <color name="dish_type_color_lau">#F0D9FF</color>
+    <color name="dish_type_color_traicay">#CAF7E3</color>
+    <color name="dish_share_item">#FFFAFA</color>
+
+
+
+
 </resources>
+

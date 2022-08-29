@@ -4,6 +4,7 @@ import android.content.Intent
 import android.os.Bundle
 import android.view.*
 import android.widget.TextView
+import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
 import androidx.recyclerview.widget.GridLayoutManager
@@ -29,6 +30,7 @@ class MenuFragment : Fragment() {
         super.onCreate(savedInstanceState)
         // If we want to use the option menu in fragment we need to add it.
         setHasOptionsMenu(true)
+        (requireActivity() as AppCompatActivity).supportActionBar?.show()
 
     }
 

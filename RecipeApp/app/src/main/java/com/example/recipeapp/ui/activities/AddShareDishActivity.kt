@@ -27,7 +27,6 @@ import com.example.recipeapp.models.User
 import com.example.recipeapp.utils.Constants
 import com.example.recipeapp.utils.GlideLoader
 import java.io.IOException
-import java.sql.Timestamp
 
 class AddShareDishActivity : BaseActivity(), View.OnClickListener {
 
@@ -94,7 +93,7 @@ class AddShareDishActivity : BaseActivity(), View.OnClickListener {
         val actionBar = supportActionBar
         if (actionBar != null) {
             actionBar.setDisplayHomeAsUpEnabled(true)
-            actionBar.setHomeAsUpIndicator(R.drawable.ic_white_color_back_24)
+            actionBar.setHomeAsUpIndicator(R.drawable.ic_black_color_back)
             actionBar.setDisplayShowTitleEnabled(false)
         }
         binding.toolbarAddDishActivity.setNavigationOnClickListener {

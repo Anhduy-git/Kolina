@@ -14,7 +14,7 @@ class MSPTextViewRegular(context: Context, attributeSet: AttributeSet)
 
     private fun applyFont() {
         val regularTypeFace: Typeface =
-            Typeface.createFromAsset(context.assets, "Montserrat-Regular.ttf")
+            Typeface.createFromAsset(context.assets, "Roboto-Regular.ttf")
         setTypeface(regularTypeFace)
     }
 }

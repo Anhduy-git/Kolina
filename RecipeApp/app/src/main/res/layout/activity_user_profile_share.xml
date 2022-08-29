@@ -4,7 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ui.activities.UserProfileShareActivity">
+    tools:context=".ui.activities.UserProfileShareActivity"
+    android:background="@color/bg_color">
 
     <androidx.appcompat.widget.Toolbar
         android:id="@+id/toolbar_settings_activity"
@@ -22,7 +23,7 @@
             android:paddingStart="@dimen/toolbar_title_paddingStart"
             android:paddingEnd="0dp"
             android:text="@string/title_settings"
-            android:textColor="@color/white"
+            android:textColor="@color/black"
             android:textSize="@dimen/toolbar_title_text_size"
             android:textStyle="bold" />
 
@@ -53,24 +54,6 @@
             android:background="@drawable/user_image_background" />
     </FrameLayout>
 
-    <com.example.recipeapp.utils.MSPTextViewRegular
-        android:id="@+id/tv_edit"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentEnd="true"
-        android:foreground="?attr/selectableItemBackgroundBorderless"
-        android:paddingStart="@dimen/settings_edit_label_marginStartEnd"
-        android:paddingTop="@dimen/settings_edit_label_marginTopBottom"
-        android:paddingEnd="@dimen/settings_edit_label_marginStartEnd"
-        android:paddingBottom="@dimen/settings_edit_label_marginTopBottom"
-        android:text="@string/lbl_edit"
-        android:textColor="@color/colorSecondaryText"
-        android:textSize="@dimen/settings_edit_label_textSize"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/fl_user_image"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.3" />
 
     <com.example.recipeapp.utils.MSPTextViewBold
         android:id="@+id/tv_name"
@@ -92,7 +75,7 @@
         android:layout_below="@id/tv_name"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="@dimen/settings_info_marginTop"
-        android:textColor="@color/colorSecondaryText"
+
         android:textSize="@dimen/settings_info_textSize"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -106,7 +89,7 @@
         android:layout_below="@id/tv_gender"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="@dimen/settings_info_marginTop"
-        android:textColor="@color/colorSecondaryText"
+
         android:textSize="@dimen/settings_info_textSize"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -120,7 +103,7 @@
         android:layout_below="@id/tv_email"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="@dimen/settings_info_marginTop"
-        android:textColor="@color/colorSecondaryText"
+
         android:textSize="@dimen/settings_info_textSize"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"

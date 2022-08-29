@@ -5,7 +5,7 @@
 
     <item android:color="@color/white" android:state_checked="true" />
 
-    <item android:color="@color/colorSecondaryText"
+    <item android:color="@color/black"
         android:state_checked="false" />
 </selector>
 <!--END-->

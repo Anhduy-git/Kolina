@@ -1,7 +1,6 @@
 package com.example.recipeapp.ui.activities
 
 import android.content.Intent
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
 import com.example.recipeapp.R
@@ -22,7 +21,7 @@ class SettingsActivity : BaseActivity(), View.OnClickListener {
 
         setupActionBar()
 
-        binding.tvEdit.setOnClickListener(this@SettingsActivity)
+        binding.ivEdit.setOnClickListener(this@SettingsActivity)
         binding.btnLogout.setOnClickListener(this@SettingsActivity)
 
         getUserDetails()
@@ -35,7 +34,7 @@ class SettingsActivity : BaseActivity(), View.OnClickListener {
         val actionBar = supportActionBar
         if (actionBar != null) {
             actionBar.setDisplayHomeAsUpEnabled(true)
-            actionBar.setHomeAsUpIndicator(R.drawable.ic_black_color_back_24)
+            actionBar.setHomeAsUpIndicator(R.drawable.ic_black_color_back)
         }
         binding.toolbarSettingsActivity.setNavigationOnClickListener {
             onBackPressed()
@@ -65,7 +64,7 @@ class SettingsActivity : BaseActivity(), View.OnClickListener {
         if (v != null) {
             when (v.id) {
 
-                R.id.tv_edit -> {
+                R.id.iv_edit -> {
                     val intent = Intent(this@SettingsActivity, UserProfileActivity::class.java)
                     intent.putExtra(Constants.EXTRA_USER_DETAILS, mUserDetails)
                     startActivity(intent)

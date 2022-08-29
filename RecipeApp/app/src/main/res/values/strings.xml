@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">Recipe App</string>
+    <string name="app_name">Kolina</string>
     <string name="login_title">Login</string>
     <string name="et_hint_email_id">Email</string>
     <string name="et_hint_password">Password</string>
@@ -81,6 +81,7 @@
     <string name="err_msg_enter_dish_quantity">Please enter dish quantity.</string>
 
     <string name="dish_uploaded_success_message">Your dish is uploaded successfully.</string>
+    <string name="dish_updated_success_message">Your dish is updated successfully.</string>
     <string name="no_dishs_added_yet">No dishs added yet!</string>
     <string name="no_dashboard_item_found">No items found!</string>
     <!-- TODO: Remove or change this placeholder text -->

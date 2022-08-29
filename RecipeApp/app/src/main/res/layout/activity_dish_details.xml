@@ -5,16 +5,18 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context=".ui.activities.DishDetailsActivity">
+    tools:context=".ui.activities.DishDetailsActivity"
+    android:background="@color/bg_color">
 
     <androidx.appcompat.widget.Toolbar
         android:id="@+id/toolbar_dish_details_activity"
         android:layout_width="match_parent"
         android:layout_height="?attr/actionBarSize"
-        android:background="@color/purple_500"
+        android:background="@color/bg_color"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
+
 
         <TextView
             android:id="@+id/tv_title"
@@ -22,7 +24,7 @@
             android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:text="@string/title_dish_details"
-            android:textColor="@color/white"
+            android:textColor="@color/black"
             android:textSize="@dimen/toolbar_title_text_size"
             android:textStyle="bold" />
 

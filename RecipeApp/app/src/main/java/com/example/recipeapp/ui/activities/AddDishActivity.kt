@@ -90,7 +90,7 @@ class AddDishActivity : BaseActivity(), View.OnClickListener {
         val actionBar = supportActionBar
         if (actionBar != null) {
             actionBar.setDisplayHomeAsUpEnabled(true)
-            actionBar.setHomeAsUpIndicator(R.drawable.ic_white_color_back_24)
+            actionBar.setHomeAsUpIndicator(R.drawable.ic_black_color_back)
             actionBar.setDisplayShowTitleEnabled(false)
         }
         binding.toolbarAddDishActivity.setNavigationOnClickListener {

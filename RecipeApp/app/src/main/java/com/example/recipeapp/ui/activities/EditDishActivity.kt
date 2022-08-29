@@ -2,11 +2,9 @@ package com.example.recipeapp.ui.activities
 
 import android.Manifest
 import android.app.Activity
-import android.content.Context
 import android.content.Intent
 import android.content.pm.PackageManager
 import android.net.Uri
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.text.TextUtils
 import android.util.Log
@@ -69,7 +67,7 @@ class EditDishActivity : BaseActivity(), View.OnClickListener {
         val actionBar = supportActionBar
         if (actionBar != null) {
             actionBar.setDisplayHomeAsUpEnabled(true)
-            actionBar.setHomeAsUpIndicator(R.drawable.ic_white_color_back_24)
+            actionBar.setHomeAsUpIndicator(R.drawable.ic_black_color_back)
             actionBar.setDisplayShowTitleEnabled(false)
         }
         binding.toolbarEditDishActivity.setNavigationOnClickListener {
@@ -254,13 +252,12 @@ class EditDishActivity : BaseActivity(), View.OnClickListener {
 
         // Hide the progress dialog
         hideProgressDialog()
-
         Toast.makeText(
             this@EditDishActivity,
             resources.getString(R.string.dish_uploaded_success_message),
             Toast.LENGTH_SHORT
         ).show()
-
+        setResult(RESULT_OK)
         finish()
     }
 
@@ -303,6 +300,7 @@ class EditDishActivity : BaseActivity(), View.OnClickListener {
                 listRecipe.remove(item)
             }
         }
+
         val dishHashMap = HashMap<String, Any>()
 
         // Here the field which are not editable needs no update. So, we will update user Mobile Number and Gender for now.
@@ -311,6 +309,7 @@ class EditDishActivity : BaseActivity(), View.OnClickListener {
         val dishTitle = binding.etDishTitle.text.toString().trim { it <= ' ' }
         //check if has change
         if (dishTitle != mDishDetails?.title) {
+
             dishHashMap[Constants.DISH_TITLE] = dishTitle
         }
 
@@ -353,12 +352,10 @@ class EditDishActivity : BaseActivity(), View.OnClickListener {
 
         Toast.makeText(
             this@EditDishActivity,
-            resources.getString(R.string.msg_profile_update_success),
+            resources.getString(R.string.dish_updated_success_message),
             Toast.LENGTH_SHORT
         ).show()
-
-
-        // Redirect to the Main Screen after profile completion.
+        setResult(RESULT_OK)
         finish()
     }
 }

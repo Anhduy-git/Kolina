@@ -2,20 +2,15 @@ package com.example.recipeapp.ui.activities
 
 import android.app.Activity
 import android.content.Intent
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
-import android.view.View
-import android.widget.Toast
 import androidx.recyclerview.widget.GridLayoutManager
-import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.recipeapp.R
 import com.example.recipeapp.adapters.DishAdapter
 import com.example.recipeapp.databinding.ActivityDishMenuBinding
 import com.example.recipeapp.firestore.FirestoreClass
 import com.example.recipeapp.models.Dish
 import com.example.recipeapp.utils.Constants
-import com.google.android.material.dialog.MaterialAlertDialogBuilder
 
 
 class DishMenuActivity : BaseActivity() {
@@ -47,14 +42,11 @@ class DishMenuActivity : BaseActivity() {
             startActivityForResult(intent, Constants.ADD_DISH)
         }
     }
+
+
     override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
         super.onActivityResult(requestCode, resultCode, data)
-        if (resultCode == Activity.RESULT_OK) {
-            //add or delete dish, then refresh
-            if (requestCode == Constants.ADD_DISH || requestCode == Constants.DISH_INFO) {
-                getDishListFromFireStore()
-            }
-        }
+        getDishListFromFireStore()
 //        else if (resultCode == Activity.RESULT_CANCELED) {
 //
 //        }
@@ -67,7 +59,7 @@ class DishMenuActivity : BaseActivity() {
         val actionBar = supportActionBar
         if (actionBar != null) {
             actionBar.setDisplayHomeAsUpEnabled(true)
-            actionBar.setHomeAsUpIndicator(R.drawable.ic_white_color_back_24)
+            actionBar.setHomeAsUpIndicator(R.drawable.ic_black_color_back)
             actionBar.setDisplayShowTitleEnabled(false)
         }
         binding.toolbarDishMenuActivity.setNavigationOnClickListener {

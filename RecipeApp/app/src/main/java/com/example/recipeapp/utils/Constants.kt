@@ -93,9 +93,12 @@ object Constants {
 
 
     val list_dish_type = arrayListOf<DishType>(
-        DishType("Man", R.drawable.monman), DishType("Ngot", R.drawable.monngot)
-       ,DishType("Nuong", R.drawable.monnuong), DishType("Chay", R.drawable.monchay),
-        DishType("Lau", R.drawable.lau), DishType("Trai Cay", R.drawable.traicay)
+        DishType("Man", R.drawable.monman, R.color.dish_type_color_man),
+        DishType("Ngot", R.drawable.monngot, R.color.dish_type_color_ngot)
+       ,DishType("Nuong", R.drawable.monnuong, R.color.dish_type_color_nuong),
+        DishType("Chay", R.drawable.monchay, R.color.dish_type_color_chay),
+        DishType("Lau", R.drawable.lau, R.color.dish_type_color_lau),
+        DishType("Trai Cay", R.drawable.traicay, R.color.dish_type_color_traicay)
     )
     val list_material = arrayListOf<Material>(
         Material("Bot Mi", R.drawable.bot_mi), Material("Fish", R.drawable.ca),

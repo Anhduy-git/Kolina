@@ -4,24 +4,24 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ui.fragments.SuggestDishFragment">
+    tools:context=".ui.fragments.SuggestDishFragment"
+    android:background="@color/bg_color">
 
     <androidx.recyclerview.widget.RecyclerView
-        android:padding="10dp"
         android:id="@+id/rv_material"
         android:layout_width="match_parent"
-        android:layout_height="550dp"
+        android:layout_height="match_parent"
         android:layout_marginStart="10dp"
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="60dp"
         android:layout_marginEnd="10dp"
-        android:background="@drawable/recyclerview_border"
-        android:layout_marginBottom="20dp"
+        android:layout_marginBottom="60dp"
+        android:padding="10dp"
 
         android:scrollbars="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        />
+        app:layout_constraintTop_toTopOf="parent" />
 
 
 
@@ -39,15 +39,14 @@
         <FrameLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            android:layout_marginTop="20dp"
-            android:layout_marginBottom="60dp">
+            android:layout_margin="10dp">
+
             <View
                 android:id="@+id/view_end_animation"
-                android:layout_width="80dp"
-                android:layout_height="80dp"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
                 android:visibility="invisible" />
 
             <com.google.android.material.floatingactionbutton.FloatingActionButton
@@ -56,9 +55,10 @@
                 android:layout_height="wrap_content"
                 android:background="@null"
                 android:scaleType="center"
-                android:src="@drawable/ic_baseline_shopping_cart_24"
-                app:fabCustomSize="80dp"
-                app:maxImageSize="40dp"
+                android:src="@drawable/ic_giohang"
+                android:backgroundTint="@color/bg_color"
+                app:fabCustomSize="50dp"
+                app:maxImageSize="30dp"
                 >
 
             </com.google.android.material.floatingactionbutton.FloatingActionButton>

@@ -13,7 +13,7 @@ class MSPTextViewBold(context: Context, attributeSet: AttributeSet)
     }
     private fun applyFont() {
         val boldTypeFace: Typeface =
-            Typeface.createFromAsset(context.assets, "Montserrat-Bold.ttf")
+            Typeface.createFromAsset(context.assets, "Roboto-Bold.ttf")
         setTypeface(boldTypeFace)
     }
 }

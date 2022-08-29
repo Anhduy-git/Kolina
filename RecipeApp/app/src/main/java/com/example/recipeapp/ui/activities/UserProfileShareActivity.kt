@@ -1,31 +1,12 @@
 package com.example.recipeapp.ui.activities
 
-import android.Manifest
-import android.app.Activity
-import android.content.Intent
-import android.content.pm.PackageManager
-import android.net.Uri
-import android.os.Build
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.text.TextUtils
-import android.util.Log
-import android.view.View
-import android.view.WindowInsets
-import android.view.WindowManager
-import android.widget.Toast
-import androidx.core.app.ActivityCompat
-import androidx.core.content.ContextCompat
 import com.example.recipeapp.R
-import com.example.recipeapp.databinding.ActivitySettingsBinding
-import com.example.recipeapp.databinding.ActivityUserProfileBinding
 import com.example.recipeapp.databinding.ActivityUserProfileShareBinding
 import com.example.recipeapp.firestore.FirestoreClass
 import com.example.recipeapp.models.User
 import com.example.recipeapp.utils.Constants
 import com.example.recipeapp.utils.GlideLoader
-import com.google.firebase.auth.FirebaseAuth
-import java.io.IOException
 
 class UserProfileShareActivity : BaseActivity() {
     private lateinit var binding: ActivityUserProfileShareBinding
@@ -50,7 +31,7 @@ class UserProfileShareActivity : BaseActivity() {
         val actionBar = supportActionBar
         if (actionBar != null) {
             actionBar.setDisplayHomeAsUpEnabled(true)
-            actionBar.setHomeAsUpIndicator(R.drawable.ic_black_color_back_24)
+            actionBar.setHomeAsUpIndicator(R.drawable.ic_black_color_back)
         }
         binding.toolbarSettingsActivity.setNavigationOnClickListener {
             onBackPressed()

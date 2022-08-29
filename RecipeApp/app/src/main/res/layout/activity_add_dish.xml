@@ -4,13 +4,14 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/bg_color"
     tools:context=".ui.activities.AddDishActivity">
 
     <androidx.appcompat.widget.Toolbar
         android:id="@+id/toolbar_add_dish_activity"
         android:layout_width="match_parent"
         android:layout_height="?attr/actionBarSize"
-        android:background="@color/purple_500"
+        android:background="@color/bg_color"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
@@ -21,7 +22,7 @@
             android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:text="@string/title_add_dish"
-            android:textColor="@color/white"
+            android:textColor="@color/black"
             android:textSize="@dimen/toolbar_title_text_size"
             android:textStyle="bold" />
     </androidx.appcompat.widget.Toolbar>
@@ -259,8 +260,9 @@
                     android:id="@+id/add_material_btn"
                     android:layout_width="130dp"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="10dp"
                     android:layout_marginStart="10dp"
+                    android:layout_marginTop="10dp"
+                    android:background="@drawable/radius_btn"
                     android:text="@string/add_material_btn" />
 
             </LinearLayout>
@@ -284,6 +286,7 @@
                     android:layout_marginTop="20dp"
                     android:text="@string/tv_recipe"
                     android:textSize="@dimen/tv_sub_title" />
+
                 <androidx.recyclerview.widget.RecyclerView
                     android:id="@+id/rv_recipe"
                     android:layout_width="match_parent"
@@ -293,8 +296,9 @@
                     android:id="@+id/add_recipe_btn"
                     android:layout_width="130dp"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="10dp"
                     android:layout_marginStart="10dp"
+                    android:layout_marginTop="10dp"
+                    android:background="@drawable/radius_btn"
                     android:text="@string/add_recipe_btn" />
 
             </LinearLayout>
@@ -307,6 +311,7 @@
                 android:layout_marginStart="10dp"
                 android:layout_marginTop="20dp"
                 android:layout_marginEnd="10dp"
+                android:background="@drawable/radius_btn"
                 android:text="@string/btn_lbl_submit"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"

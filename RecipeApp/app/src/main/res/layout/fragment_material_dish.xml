@@ -4,7 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ui.fragments.MaterialDishFragment">
+    tools:context=".ui.fragments.MaterialDishFragment"
+    android:background="@color/bg_color">
 
 
 
@@ -27,7 +28,6 @@
             android:id="@+id/ll_material"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="16dp"
             android:background="@color/white"
             android:orientation="vertical"
             app:layout_constraintTop_toTopOf="parent"

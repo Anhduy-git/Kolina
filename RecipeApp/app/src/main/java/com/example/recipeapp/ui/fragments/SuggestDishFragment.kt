@@ -5,12 +5,15 @@ import android.content.Intent
 import android.os.Bundle
 import android.util.Log
 import android.view.LayoutInflater
+import android.view.Menu
 import android.view.View
 import android.view.ViewGroup
 import android.view.animation.Animation
 import android.widget.ImageView
+import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.GridLayoutManager
+import com.example.recipeapp.R
 import com.example.recipeapp.adapters.MaterialCheckAdapter
 import com.example.recipeapp.databinding.FragmentSuggestDishBinding
 import com.example.recipeapp.models.Material
@@ -29,6 +32,14 @@ class SuggestDishFragment : Fragment() {
     private var listMaterialChoosed: ArrayList<Material> = ArrayList()
 //    private lateinit var adapterChoosed: MaterialChoosedAdapter
     private lateinit var adapterChecked: MaterialCheckAdapter
+
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+        // If we want to use the option menu in fragment we need to add it.
+        setHasOptionsMenu(false)
+
+
+    }
 
     override fun onCreateView(
         inflater: LayoutInflater,
@@ -102,8 +113,6 @@ class SuggestDishFragment : Fragment() {
                 for (item in listMaterial) {
                     item.isSelected = listMaterialChoosed.contains(item)
                 }
-                Log.d("testhaha", listMaterialChoosed.toString())
-                Log.d("testhaha", listMaterial.toString())
                 adapterChecked.setData(listMaterial)
                 binding.tvCartCounter.text = (listMaterialChoosed.size.toString())
             }

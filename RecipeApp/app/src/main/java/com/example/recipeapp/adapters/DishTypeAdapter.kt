@@ -2,6 +2,7 @@ package com.example.recipeapp.adapters
 
 import android.content.Context
 import android.content.Intent
+import android.util.Log
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.navigation.findNavController
@@ -64,6 +65,7 @@ class DishTypeAdapter(
 
                 dishTypeItemName.text = dishType.name
 
+                llDishTypeItem.setBackgroundResource(dishType.color)
 
                 itemView.setOnClickListener {
                     val intent = Intent(context, DishMenuActivity::class.java)
