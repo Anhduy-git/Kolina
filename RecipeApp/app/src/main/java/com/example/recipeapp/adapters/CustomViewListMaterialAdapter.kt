@@ -81,6 +81,8 @@ class CustomViewListMaterialAdapter(
         fun bind(materialContent: String, position: Int, context: Context) {
             binding.apply {
                 tvNum.setText(context.resources.getString(R.string.material_num, position + 1))
+                etMaterialDetail.setMaxLines(Integer.MAX_VALUE); // Or specify a lower value if you want
+                etMaterialDetail.setHorizontallyScrolling(false);
                 etMaterialDetail.setText(materialContent)
             }
         }

@@ -60,6 +60,8 @@ class CustomViewListRecipeAdapterGet(
 
             binding.apply {
                 tvNum.setText(context.resources.getString(R.string.recipe_num, position + 1))
+                etRecipeDetail.setMaxLines(Integer.MAX_VALUE); // Or specify a lower value if you want
+                etRecipeDetail.setHorizontallyScrolling(false);
                 etRecipeDetail.setText(recipeContent)
             }
         }
