@@ -8,6 +8,7 @@ import android.util.Log
 import android.view.MotionEvent
 import android.view.WindowManager
 import androidx.recyclerview.widget.LinearLayoutManager
+import androidx.recyclerview.widget.RecyclerView
 import com.example.recipeapp.R
 import com.example.recipeapp.adapters.CommentListAdapter
 import com.example.recipeapp.databinding.ActivityCommentBinding
@@ -40,6 +41,27 @@ class CommentActivity : BaseActivity() {
             dishId = intent!!.getStringExtra(Constants.EXTRA_DISH_ID)!!
             if (dishId != null) {
                 getCommentListFromFireStore()
+                binding.rvComment.setOnScrollListener(object : RecyclerView.OnScrollListener() {
+                    override fun onScrollStateChanged(recyclerView: RecyclerView, newState: Int) {
+                        super.onScrollStateChanged(recyclerView, newState)
+
+                        try {
+                            val firstPos: Int = (binding.rvComment.layoutManager as LinearLayoutManager).findFirstCompletelyVisibleItemPosition()
+                            if (firstPos > 0) {
+                                binding.swipeRefreshLayout.setEnabled(false)
+                            } else {
+                                binding.swipeRefreshLayout.setEnabled(true)
+                                if (binding.rvComment.getScrollState() == 1) if (binding.swipeRefreshLayout.isRefreshing()) binding.rvComment.stopScroll()
+                            }
+                        } catch (e: Exception) {
+//                    Log.e(TAG, "Scroll Error : " + e.localizedMessage)
+                        }
+                    }
+                })
+                binding.swipeRefreshLayout.setOnRefreshListener {
+                    getCommentListFromFireStore()
+                    binding.swipeRefreshLayout.isRefreshing = false
+                }
             }
 
         }
@@ -119,7 +141,7 @@ class CommentActivity : BaseActivity() {
     override fun finish() {
         if (addNewComment) {
             val intentIdx: Intent = Intent()
-            intentIdx.putExtra(Constants.EXTRA_UPDATE_INDEX, intent.getIntExtra(Constants.EXTRA_UPDATE_INDEX, - 1))
+            intentIdx.putExtra(Constants.EXTRA_UPDATE_INDEX, intent.getIntExtra(Constants.EXTRA_UPDATE_INDEX, -1))
             setResult(RESULT_OK, intentIdx)
         }
         super.finish()

@@ -73,12 +73,28 @@ class ShareDishFragment : BaseFragment() {
         binding.rvDish.layoutManager = LinearLayoutManager(requireActivity())
         binding.rvDish.setHasFixedSize(true)
 
+        binding.rvDish.setOnScrollListener(object : RecyclerView.OnScrollListener() {
+            override fun onScrollStateChanged(recyclerView: RecyclerView, newState: Int) {
+                super.onScrollStateChanged(recyclerView, newState)
+
+                try {
+                    val firstPos: Int = (binding.rvDish.layoutManager as LinearLayoutManager).findFirstCompletelyVisibleItemPosition()
+                    if (firstPos > 0) {
+                        binding.swipeRefreshLayout.setEnabled(false)
+                    } else {
+                        binding.swipeRefreshLayout.setEnabled(true)
+                        if (binding.rvDish.getScrollState() == 1) if (binding.swipeRefreshLayout.isRefreshing()) binding.rvDish.stopScroll()
+                    }
+                } catch (e: Exception) {
+//                    Log.e(TAG, "Scroll Error : " + e.localizedMessage)
+                }
+            }
+        })
+
         binding.swipeRefreshLayout.setOnRefreshListener {
             getDishListFromFireStore()
             binding.swipeRefreshLayout.isRefreshing = false
         }
-
-
 
         // TODO Step 7: Pass the third parameter value.
         // START

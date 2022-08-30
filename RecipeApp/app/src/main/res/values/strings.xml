@@ -79,6 +79,7 @@
     <string name="err_msg_enter_dish_price">Please enter dish price.</string>
     <string name="err_msg_enter_dish_description">Please enter dish description.</string>
     <string name="err_msg_enter_dish_quantity">Please enter dish quantity.</string>
+    <string name="err_msg_select_dish_main_ingredient">Please choose at least 1 ingredient.</string>
 
     <string name="dish_uploaded_success_message">Your dish is uploaded successfully.</string>
     <string name="dish_updated_success_message">Your dish is updated successfully.</string>

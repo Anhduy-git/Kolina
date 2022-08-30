@@ -104,6 +104,7 @@ class AddShareDishActivity : BaseActivity(), View.OnClickListener {
 
     override fun onClick(v: View?) {
         if (v != null) {
+
             when (v.id) {
 
                 R.id.add_recipe_btn -> {
@@ -138,7 +139,6 @@ class AddShareDishActivity : BaseActivity(), View.OnClickListener {
                 }
                 R.id.submit_btn -> {
                     if (validateDishDetails()) {
-                        getMainMaterial()
                         if (mUserDetails != null) {
                             uploadDishImage()
                         }
@@ -200,8 +200,15 @@ class AddShareDishActivity : BaseActivity(), View.OnClickListener {
     }
 
     private fun validateDishDetails(): Boolean {
+        listMainMaterial = ArrayList()
+        for (item in binding.llListMainMaterial.children) {
+            if (item is CheckBox) {
+                if (item.isChecked) {
+                    listMainMaterial.add(item.text.toString())
+                }
+            }
+        }
         return when {
-
             mSelectedImageFileUri == null -> {
                 showErrorSnackBar(resources.getString(R.string.err_msg_select_dish_image), true)
                 false
@@ -224,6 +231,10 @@ class AddShareDishActivity : BaseActivity(), View.OnClickListener {
                 )
                 false
             }
+            listMainMaterial.size == 0 -> {
+                showErrorSnackBar(resources.getString(R.string.err_msg_select_dish_main_ingredient), true)
+                false
+            }
 
             //TODO: add more check
             else -> {
@@ -231,16 +242,16 @@ class AddShareDishActivity : BaseActivity(), View.OnClickListener {
             }
         }
     }
-    private fun getMainMaterial() {
-        for (item in binding.llListMainMaterial.children) {
-            if (item is CheckBox) {
-                if (item.isChecked) {
-                    listMainMaterial.add(item.text.toString())
-                }
-            }
-        }
-
-    }
+//    private fun getMainMaterial() {
+//        for (item in binding.llListMainMaterial.children) {
+//            if (item is CheckBox) {
+//                if (item.isChecked) {
+//                    listMainMaterial.add(item.text.toString())
+//                }
+//            }
+//        }
+//
+//    }
 
 
     fun dishUploadSuccess(dishId: String) {

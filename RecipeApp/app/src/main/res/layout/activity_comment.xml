@@ -4,8 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
-    tools:context=".ui.activities.CommentActivity"
-    android:background="@android:color/transparent">
+    android:background="@android:color/transparent"
+    tools:context=".ui.activities.CommentActivity">
 
 
     <androidx.constraintlayout.widget.ConstraintLayout
@@ -16,26 +16,35 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
 
-        <androidx.recyclerview.widget.RecyclerView
-            android:id="@+id/rv_comment"
+        <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+            android:id="@+id/swipe_refresh_layout"
             android:layout_width="match_parent"
-            android:layout_marginStart="10dp"
-            android:layout_marginEnd="20dp"
-            android:layout_height="330dp"
+            android:layout_height="350dp"
             android:layout_marginTop="20dp"
-            android:layout_marginBottom="20dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="10dp"
+
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            android:scrollbars="vertical"
-            />
+            app:layout_constraintTop_toTopOf="parent">
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rv_comment"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:scrollbars="vertical"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                />
+        </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="40dp"
+            android:layout_marginTop="30dp"
             android:orientation="horizontal"
-            app:layout_constraintTop_toBottomOf="@id/rv_comment">
+            app:layout_constraintTop_toBottomOf="@id/swipe_refresh_layout">
 
 
             <com.google.android.material.textfield.TextInputLayout
@@ -58,20 +67,19 @@
 
 
             </com.google.android.material.textfield.TextInputLayout>
+
             <ImageButton
                 android:id="@+id/comment_btn"
-                android:layout_marginStart="10dp"
-                android:layout_marginTop="10dp"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="10dp"
                 android:background="@null"
                 android:foreground="?attr/selectableItemBackground"
-                android:src="@drawable/ic_send"/>
+                android:src="@drawable/ic_send" />
         </LinearLayout>
+
     </androidx.constraintlayout.widget.ConstraintLayout>
-
-
-
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
