@@ -10,7 +10,7 @@
     <dimen name="btn_padding">8dp</dimen>
     <dimen name="btn_textSize">18sp</dimen>
     <dimen name="lbl_text_view_textSize">16sp</dimen>
-    <dimen name="toolbar_title_paddingStart">-80dp</dimen>
+    <dimen name="toolbar_title_paddingStart">-40dp</dimen>
     <dimen name="toolbar_title_text_size">23sp</dimen>
     <dimen name="txt_terms_condition_marginStart">10dp</dimen>
     <dimen name="txt_terms_and_condition_textSize">14sp</dimen>
