@@ -1,7 +1,10 @@
-![kolina-logo](https://user-images.githubusercontent.com/84486806/188912899-4f7da0c5-5732-4ef9-bba1-ace7abba788d.png)
+## You are the  ![Visitors](https://api.visitorbadge.io/api/visitors?path=https%3A%2F%2Fgithub.com%2FAnhduy-git%2FKolina&countColor=%230096ff&style=flat) ! Thanks for your visit!
 
 
 # Kolina (Recipe Management)
+
+![kolina-logo](https://user-images.githubusercontent.com/84486806/188912899-4f7da0c5-5732-4ef9-bba1-ace7abba788d.png)
+
 Kolina is an android application that help housewives or cooking lovers to manage and share their dish's recipe with everyone. Kolina has also some advanced features to help them in cooking and prepare ingredients.
 
 ## Contributors
